@@ -7,7 +7,7 @@ import { Message } from "./models/Message.js";
 
 
 dotenv.config();
-await mongoose.connect(process.env.MONGODB_URI);
+await mongoose.connect('mongodb+srv://kesib27679:N7qUiLjWtDrg9sqe@whatsapp.a1jzgjn.mongodb.net/');
 
 // __dirname workaround in ES modules
 const __filename = fileURLToPath(import.meta.url);
