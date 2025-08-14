@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ChatList from "./components/allChats/ChatList";
 import Chat from "./components/chat/Chat";
-import Sidebar from "./components/sidebar/Sidebar";
+import Sidebar from "./components/sidebar/SideBar";
 import "./App.css";
 
 function App() {
