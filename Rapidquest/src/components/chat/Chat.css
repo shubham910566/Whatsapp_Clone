@@ -1,0 +1,130 @@
+/* Mobile-First Defaults */
+.chat-container {
+  flex: 1;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: #e5ddd5;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: #f5f5f5;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-header-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-header-icons .icon {
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+  padding: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.chat-header-icons .icon:hover {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-bubble {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.from-me {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.from-them {
+  align-self: flex-start;
+  background-color: white;
+}
+
+.chat-meta {
+  font-size: 11px;
+  color: #777;
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.chat-input-box {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #fafafa;
+  gap: 8px;
+}
+
+.chat-input-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.chat-input-box button {
+  padding: 10px 16px;
+  background-color: #00bfa5;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.chat-input-box button:hover {
+  background-color: #009e8b;
+}
+
+/* ================= Desktop Styles ================= */
+@media (min-width: 768px) {
+  .chat-container {
+    height: 100vh;
+  }
+
+  .chat-header {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  .chat-messages {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .chat-bubble {
+    max-width: 60%;
+  }
+
+  .chat-input-box {
+    padding: 12px 16px;
+  }
+}

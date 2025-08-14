@@ -1,0 +1,91 @@
+/* Base (Mobile-First) Styles */
+.sidebar {
+  width: 100%;
+  height: 60px;
+  background-color: #202c33; /* WhatsApp Web dark sidebar */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.upperpart,
+.lowerpart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebar svg {
+  color: #aebac1; /* Icon default color */
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar svg:hover {
+  color: #00a884; /* WhatsApp green */
+  transform: scale(1.1);
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 999;
+}
+
+.tooltip-wrapper:hover .tooltip {
+  opacity: 1;
+}
+
+/* Larger Screens (Tablet and Desktop) */
+@media (min-width: 768px) {
+  .sidebar {
+    width: 80px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+    top: 0;
+    bottom: auto;
+  }
+
+  .upperpart,
+  .lowerpart {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .tooltip {
+    bottom: auto;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+  }
+}
