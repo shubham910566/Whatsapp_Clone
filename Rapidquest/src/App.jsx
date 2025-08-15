@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchChats = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/chats");
+        const response = await fetch("https://whatsapp-clone-backend-oym6.onrender.com/api/chats");
         const data = await response.json();
         setChats(data);
       } catch (error) {
@@ -31,7 +31,7 @@ function App() {
     const name = chats[wa_id]?.name;
 
     try {
-      await fetch("http://localhost:5000/api/send", {
+      await fetch("https://whatsapp-clone-backend-oym6.onrender.com/api/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ wa_id, name, text })
